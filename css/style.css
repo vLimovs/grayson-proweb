@@ -1,0 +1,338 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+.header__nav-list a {
+    font-size: 12px;
+    color: #000;
+}
+
+.header__nav-search {
+    display: flex;
+    gap: 4px;
+}
+
+.header__nav-search input {
+    border: 1px #41A28E solid;
+    padding-left: 12px;
+}
+
+.header__nav-search input::placeholder {
+    color: #4B4848;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 750px;
+    color: #FFF;
+    background: url(../images/headerBg.jpg) center / cover;
+}
+
+.header__content h1 {
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.header__content p {
+    font-size: 22px;
+    margin: 30px 0 50px;
+}
+
+.btn {
+    padding: 22px 35px;
+    background: #FFF;
+    color: #000;
+    transition: .3s;
+}
+
+.btn:hover {
+    color: #FFF;
+    background: #41A28E;
+}
+
+.dropdown__list {
+    position: absolute;
+    top: 28;
+    background: #FFF;
+    width: 160px;
+    height: 0px;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid #e5e5e500;
+    transition: .3s;
+    opacity: 0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown__list a {
+    padding: 12.6px 30px;
+    background: white;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    transition: .3s;
+    border-radius: 2px;
+}
+
+.dropdown__list a:hover {
+    color: #FFF;
+    background: #41A28E;
+}
+
+.dropdown__list li:last-of-type a {
+    border-bottom: 0px solid #E5E5E5;
+}
+
+.dropdown:hover .dropdown__list {
+    height: 120px;
+    border: 1px solid #e5e5e5;
+    opacity: 1;
+}
+
+.dropdown:hover .dropdown-img {
+    transform: rotate(180deg);
+}
+
+.comm__cards {
+    display: flex;
+    margin: 50px 0;
+    justify-content: space-between;
+}
+
+.comm__cards-item {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.comm__cards-item p {
+    position: absolute;
+    bottom: 0;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    background: rgba(75, 72, 72, 0.7);
+    transform: translateY(100%);
+    transition: .3s;
+}
+
+.comm__cards-item:hover p {
+    transform: translateY(0%);
+}
+
+.main__text {
+    text-align: center;
+}
+
+.main__text h2 {
+    margin-bottom: 18px;
+    font-size: 50px;
+}
+
+.main__text p {
+    color: #666;
+    max-width: 496px;
+    margin: auto;
+}
+
+.coll {
+    height: 404px;
+    background: url(../images/collBg.jfif) center / cover fixed;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.coll .container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.coll h2 {
+    font-size: 20px;
+}
+
+.coll p {
+    font-size: 50px;
+    margin-bottom: 22px;
+}
+
+.goods .main__text {
+    margin-bottom: 70px;
+}
+
+.goods__content {
+    display: flex;
+    gap: 30px;
+}
+
+.goods__content-item-info {
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+    display: flex;
+}
+
+.goods__content-item-info:hover > div{
+    transform: translateY(0%);
+}
+
+.goods__content-item-info>div {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 16px 19px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    bottom: 0px;
+    transition: .6s;
+    transform: translateY(110%);
+}
+
+.goods__content-item-info a {
+    color: #FFF;
+    display: flex;
+    gap: 14px;
+    font-size: 12px;
+    align-items: center;
+}
+
+.goods__content-item-info div div {
+    display: flex;
+    gap: 15px;
+}
+
+.goods__content-item-info div div img {
+    cursor: pointer;
+}
+
+.goods__content-item h3 {
+    font-size: 22px;
+}
+
+.goods__content-item p {
+    font-size: 18px;
+}
+
+.goods__content-item-info span {
+    padding: 10px 18px;
+    color: #fff;
+    font-size: 12px;
+    background: #4b484b;
+    font-family: system-ui;
+    position: absolute;
+    opacity: 0.5;
+    transition: .4s;
+}
+
+.goods__content-item-info:hover span {
+    opacity: 1;
+}
+
+.old-price {
+    color: #666;
+    text-decoration: line-through #909090;
+}
+
+.goods__content-item p {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer {
+    background: #000000;
+    padding: 36px 0;
+    margin-top: 50px;
+}
+
+.footer__form-input input::placeholder {
+    color: #909090;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__form, .footer__list {
+    width: 255px;
+}
+
+.footer a {
+    color: #FFF;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+.footer__form-input input {
+    padding: 14px 10px;
+    width: 200px;
+}
+
+.footer__form-input button {
+    background: #41A28E;
+    padding: 14px;
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer h2 {
+    color: #FFF;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.footer__form-input {
+    display: flex;
+}
+
+.footer__list:last-of-type a{
+    margin-bottom: 14.7px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer__form p {
+margin: 20px 0;
+font-size: 14px;
+color: #fff;
+}
